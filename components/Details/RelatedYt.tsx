@@ -64,7 +64,7 @@ pl:{
 
 
         }}  key={data.video.title} >
-          <a target={'_blank'} href={`https://www.youtube.com/watch?v=${data.video.videoId}`}>
+          <a target={'_blank'} rel="noreferrer" href={`https://www.youtube.com/watch?v=${data.video.videoId}`}>
 <Image src={data.video.thumbnails[0].url} width={250} height={250}/></a>
 
 

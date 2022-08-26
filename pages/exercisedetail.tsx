@@ -9,7 +9,7 @@ const execise_db_by_id_url = 'https://exercisedb.p.rapidapi.com/exercises/exerci
 
 
 
-function exercisedetail() {
+function Exercisedetail() {
 var router = useRouter();
 var exercise_id = router.query["id"]
 const twentyFourHoursInMs = 1000 * 60 * 60 * 24;
@@ -30,4 +30,4 @@ const { data,isFetched} = useQuery([`${exercise_id}`],fetch_exercise_by_id,{stal
   )
 }
 
-export default exercisedetail
+export default Exercisedetail

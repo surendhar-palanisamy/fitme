@@ -5,19 +5,22 @@ import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu'
 import Gym from '../../public/icons/gym.png'
 import RightArrow from '../../public/icons/right-arrow.png';
 import LeftArrow from '../../public/icons/left-arrow.png'
+import { La } from './LeftArrow'
 
 function HorizontalBar({ data,searchedExercises,setsearch }: any) {
    
     const [bodypart,setbodypart]= useState('')
+    const { scrollNext } = useContext(VisibilityContext)
+    const { scrollPrev } = useContext(VisibilityContext)
     const rightarrow = () => {
-        const { scrollNext } = useContext(VisibilityContext)
+      
         return (<div onClick={() => { scrollNext() }}>
             <Image height={20} width={20} src={RightArrow} />
         </div>)
     }
     const leftarrow = () => {
         
-        const { scrollPrev } = useContext(VisibilityContext)
+       
         return (<div onClick={() => { scrollPrev() }}>
             <Image height={20} width={20} src={LeftArrow} />
         </div>)
